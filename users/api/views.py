@@ -22,4 +22,4 @@ class UserApipViewSet(ModelViewSet):
             request.data['password'] = make_password(password)
         else:
             request.data['password'] = request.user.password
-        return super().create(request, *args, **kwargs)
+        return super().update(request, *args, **kwargs)
